@@ -43,9 +43,9 @@ onplayerspawned()
 			self enableInvulnerability(); // God mode is on
     		old_origin = self.origin;
     		old_angles = self getPlayerAngles();
-			self thread print_to_all( self.name + " is ^1AFK ^7for ^1max. 5 Minutes");
+			self thread print_to_all( self.name + " is ^1AFK ^7for ^1max. 30 Minutes");
 			afk = 0;
-			wait 5;
+			wait 30;
 
 			
     		while(distance(old_origin, self.origin) <= 5 || old_angles != self getPlayerAngles() && afk == 0 && afkc < 5900)
